@@ -1,0 +1,26 @@
+
+public class IterativeSearcher {
+
+	public int doBinarySearch(IntegerArray arr, int x) {
+	    int left = 0;
+	    int right = arr.length() - 1;
+	    int counter = 0;
+	    while (left < right) {
+	        int mid = left + (right - left) / 2;
+	        counter++;
+	        if (x == arr.read(mid)) {
+	            return mid;
+	        } else if (x < arr.read(mid)) {
+	            right = mid;
+	        } else {
+	            left = mid + 1;
+	        }
+	    }
+	    return -1;
+	}
+	
+	if (x == arr.read(left)) {
+	    return left;
+	}
+
+}

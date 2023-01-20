@@ -1,0 +1,48 @@
+
+public class BankAccount {
+	public int accounts;
+	
+	private String accountName;
+	private double accountBalance;
+	private double withdrawalFee;
+	private double annualInterestRate;
+	
+
+	public BankAccount(String name, double balance, double fee, double interest) {
+		this.accountName = this.truncate(name, 20);
+		this.accountBalance = balance;
+		this.withdrawalFee = fee;
+		this.annualInterestRate = interest;
+		
+	}
+	
+	public BankAccount(String name, double balance) {
+		this(name, balance, 0.00, 0.00);
+	}
+	public BankAccount(String name) {
+		this(name, 0, 0.00, 0.00);
+	}
+	
+	private String truncate(String value, int length)
+	{
+	  if (value != null && value.length() > length)
+	    value = value.substring(0, length);
+	  return value;
+	}
+	
+	public String getAccountName() {
+		return this.accountName;
+	}
+	
+	public double getBalance() {
+		return this.accountBalance;
+	}
+	
+	public double getAnnualInterestRate() {
+		return this.annualInterestRate;
+	}
+	
+	public double getWithdrawalFee() {
+		return this.withdrawalFee;
+	}
+}

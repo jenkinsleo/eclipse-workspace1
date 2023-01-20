@@ -1,0 +1,19 @@
+You have a class Question which can be used in a Quiz application. The design of this class is maybe a bit odd,
+and the challenge is that you CANNOT change the Question class in any way.
+
+Nonetheless, you are going to create a subclass of Question called TrueFalseQuestion.
+
+The TrueFalseQuestion class needs to implement the following behaviour:
+
+1. We want the "Answer True or False: " to be prepended automatically to the question text.
+e.g. If the user sets the text of the Question to "Albert Einstein was the inventer of Java." the TrueFalseQuestion.getText will be displayed to the user like this
+
+	Answer True or False: Albert Einstein was the inventer of Java.
+
+2. Capitalization should not matter when determining if the answer is correct. 
+
+3. 't' for true and 'f' for false should be accepted as response.
+
+Note that some of the superclass methods are set to 'final, which means you cannot override them.
+Hint: you will need to override those methods not set to final and thereby modify the behaviour of the superclass without replacing it.
+

@@ -1,0 +1,46 @@
+
+public class RecursiveSearcher {
+	
+	public RecursiveSearcher() {
+	}
+
+	public int doBinarySearch(IntegerArray arrayOfInts, int target) {
+		int length = arrayOfInts.length();
+		if (target == arrayOfInts.read(0)) {
+			return 0;
+		}
+		
+		if (target == arrayOfInts.read(length - 1)) {
+			return length - 1;
+		}
+		
+		return binarySearch(arrayOfInts, 0, arrayOfInts.length() - 1, target);
+	
+}
+	
+	public int binarySearch(IntegerArray arrayOfInts, int start, int end, int target) {
+		int middle = (start + end) / 2;
+	     if (end < start) {
+	       return -1;
+	     }
+
+	     if (target == arrayOfInts.read(middle)) {
+	    	 if (target == arrayOfInts.read(middle-1)) {
+	    		 int newpos = 0;
+	    		 while (target == arrayOfInts.read(middle-1)) {
+	    			 middle --;
+	    		 }
+	    		 return middle -1;
+	    	 } else {
+	    		 return middle;
+	    	 }
+	        
+	     } else if (target < arrayOfInts.read(middle)) {
+	        return binarySearch(arrayOfInts, start, middle - 1, target);
+	     } else {
+	        return binarySearch(arrayOfInts, middle + 1, end, target);
+	     }
+		
+		
+	}
+}

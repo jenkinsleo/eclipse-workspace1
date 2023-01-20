@@ -1,0 +1,30 @@
+
+public class IterativeSearcher {
+
+	public int doBinarySearch(IntegerArray arr, int x) {
+	    int left = 0;
+	    int right = arr.length() - 1;
+
+	    // instead of modifying the array, we use a variable to store the sentinel value
+	    int sentinel = x;
+
+	    while (arr.read(left) != sentinel) {
+	        int mid = left + (right - left) / 2;
+	        if (x < arr.read(mid)) {
+	            right = mid - 1;
+	        } else {
+	            left = mid + 1;
+	        }
+	    }
+
+	    // check if the found value is not the sentinel value
+	    if (arr.read(left) != x) {
+	        return -1;
+	    } else {
+	        return left;
+	    }
+	}
+	
+	
+
+}

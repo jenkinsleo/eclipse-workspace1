@@ -1,0 +1,13 @@
+Building off the MenuItem hierarchy we created in the previous exercise, we want to create three subclasses that represent
+a specific type of Sandwich, Salad, and Drink. These classes will be called 'ClubSandwich', 'SpinachSalad', and 'Cappuccino' respectively, and
+each will inherit from Sandwich, Salad, and Drink respectively. 
+
+Note: As these classes inherit from superclasses that implement the MenuItem interface, they will themselves also be MenuItems! So, you do
+not need to re-implement this interface.
+
+The name and the price of each item is fixed. Thus, you should implement
+a constructor with zero arguments (the default constructor) which sets
+the values as follows:
+  ClubSandwich: "Club Sandwich"; 2.75 
+  SpinachSalad: "Spinach Salad"; 1.25
+  Cappuccino: "Cappuccino"; 3.50

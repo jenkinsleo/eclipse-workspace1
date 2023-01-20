@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/Users/leojenkins/Documents/CS30/RecursionPractice"/>
+			<item value="/Users/leojenkins/Documents/CS30/IterativeSearcher"/>
+			<item value="/Users/leojenkins/Documents/CS30/Exercises OO2"/>
+			<item value="/Users/leojenkins/Documents/compsci10"/>
+			<item value="/Users/leojenkins/Downloads/GameOfLife"/>
+			<item value="/Users/leojenkins/Documents/leoscs20game"/>
+			<item value="/Users/leojenkins/Downloads/AnimationExamples-master"/>
+			<item value="/Users/leojenkins/Downloads/MovableSpriteAnimation"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/Users/leojenkins/Downloads/animation-MrSluginator_3 (1).zip"/>
+			<item value="/Users/leojenkins/Downloads/animation-MrSluginator"/>
+			<item value="/Users/leojenkins/Documents/compsci10/CollidingSpriteAnimation"/>
+			<item value="/Users/leojenkins/Downloads/MovableSpriteAnimation 2"/>
+			<item value="/Users/leojenkins/Documents/compsci10/compsci20/MovableSpriteAnimation"/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+</section>

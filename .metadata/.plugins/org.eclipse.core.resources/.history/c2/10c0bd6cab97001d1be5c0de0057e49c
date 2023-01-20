@@ -1,0 +1,57 @@
+public class IterativeSorter {
+	
+	public void doBubbleSort(IntegerArray arrayToSortayToSort) {
+		int n = arrayToSortayToSort.length();
+        for (int i = 0; i < n - 1; i++)
+            for (int j = 0; j < n - i - 1; j++)
+                if (arrayToSortayToSort.read(j) > arrayToSortayToSort.read(j + 1)) {
+                    // swap arrayToSort[j+1] and arrayToSort[j]
+                    int temp = arrayToSortayToSort.read(j);
+                    arrayToSortayToSort.write(j, arrayToSortayToSort.read(j+1));
+                    arrayToSortayToSort.write(j+1, temp);
+                }
+		
+	}
+
+	public void doSelectionSort(IntegerArray arrayToSort) {
+		int n = arrayToSort.length();
+		 
+        // One by one move boundary of unsorted subarrayToSortay
+        for (int i = 0; i < n; i++)
+        {
+            // Find the minimum element in unsorted arrayToSortay
+            int min_idx = i;
+            for (int j = i+1; j < n; j++)
+                if (arrayToSort.read(j) < arrayToSort.read(min_idx))
+                    min_idx = j;
+ 
+            // Swap the found minimum element with the first
+            // element
+            int temp = arrayToSort.read(min_idx);
+            arrayToSort.write(min_idx, arrayToSort.read(i));
+            arrayToSort.write(i, temp);
+        }
+	}
+
+	public void doInsertionSort(IntegerArray array) {
+		int size = array.length();
+
+	    for (int step = 0; step < size; step++) {
+	      int key = array.read(step);
+	      int j = step - 1;
+
+	      // Compare key with each element on the left of it until an element smaller than
+	      // it is found.
+	      // For descending order, change key<array[j] to key>array[j].
+	      while (j >= 0 && key < array.read(j)) {
+	        array.write(j+1, j);;
+	        j--;
+	      }
+
+	      // Place key at after the element just smaller than it.
+	      array.write(j+1, key);;
+	    }
+		
+	}
+
+}

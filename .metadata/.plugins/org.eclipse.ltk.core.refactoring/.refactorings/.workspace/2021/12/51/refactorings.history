@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;TriangleClassifier&apos;" deleteContents="true" description="Delete resource &apos;TriangleClassifier&apos;" element1="/TriangleClassifier" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1639499017296"/>
+</session>

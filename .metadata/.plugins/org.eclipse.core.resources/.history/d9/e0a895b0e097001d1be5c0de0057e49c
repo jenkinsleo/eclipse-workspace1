@@ -1,0 +1,66 @@
+public class RecursiveSorter {
+	
+	public void doQuickSort(IntegerArray clone) {
+	}
+
+    public void doMergeSort(IntegerArray arrayToSort) {
+        mergeSort(arrayToSort, 0, arrayToSort.length() - 1);
+    }
+
+    private void mergeSort(IntegerArray arrayToSort, int start, int end) {
+        if (start < end) {
+            int middle = (start + end) / 2;
+            mergeSort(arrayToSort, start, middle);
+            mergeSort(arrayToSort, middle + 1, end);
+            merge(arrayToSort, start, middle, end);
+        }
+    }
+
+    private void merge(IntegerArray arrayToSort, int start, int middle, int end) {
+        // Create temporary arrays for left and right subarrays
+        int leftSize = middle - start + 1;
+        int rightSize = end - middle;
+        int[] leftArray = new int[leftSize];
+        int[] rightArray = new int[rightSize];
+
+        // Copy data to temporary arrays
+        for (int i = 0; i < leftSize; i++) {
+            leftArray[i] = arrayToSort.read(start + i);
+        }
+        for (int j = 0; j < rightSize; j++) {
+            rightArray[j] = arrayToSort.read(middle + 1 + j);
+        }
+
+        // Initialize indexes for left and right subarrays and main array
+        int i = 0, j = 0, k = start;
+
+        // Merge left and right subarrays back into main array
+        while (i < leftSize && j < rightSize) {
+            if (leftArray[i] <= rightArray[j]) {
+                arrayToSort.write(k, leftArray[i]);
+                i++;
+            } else {
+                arrayToSort.write(k, rightArray[j]);
+                j++;
+            }
+            k++;
+        }
+
+        // Copy remaining elements of leftArray if any
+        while (i < leftSize) {
+            arrayToSort.write(k, leftArray[i]);
+            i++;
+            k++;
+        }
+
+        // Copy remaining elements of rightArray if any
+        while (j < rightSize) {
+            arrayToSort.write(k, rightArray[j]);
+            j++;
+            k++;
+        }
+    }
+}
+
+
+

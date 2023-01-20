@@ -1,0 +1,26 @@
+
+public class IterativeSearcher {
+
+	public int doBinarySearch(IntegerArray arr, int x) {
+	    int left = 0;
+	    int right = arr.length() - 1;
+
+	    while (left <= right) {
+	        int mid = left + (right - left) / 2;
+	        if (x == arr.read(mid)) {
+	            // check if the found value is the first occurrence in the array
+	            while(mid-1>=0 && arr.read(mid-1) == x) mid--;
+	            return mid;
+	        } else if (x < arr.read(mid)) {
+	            right = mid - 1;
+	        } else {
+	            left = mid + 1;
+	        }
+	    }
+
+	    return -1;
+	}
+	
+	
+
+}

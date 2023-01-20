@@ -1,0 +1,30 @@
+package ex011;
+
+/*Let's take a break from classes, members, and methods... The String format method is a very useful
+ * way to build strings quickly. It is quite similar to PYthon's .format function, and also similar
+ * (and in fact derives from) how string formatting was done in C and C++
+ * 
+ * See https://alvinalexander.com/programming/printf-format-cheat-sheet/ for a decent quick reference.
+ * 
+ * Complete the following methods to return a String in the format as specified in the unit test
+ * 
+ */
+
+public class StringFormatter {
+
+	public static String formatCoordinate(int x, int y) {
+		return String.format("(%d,%d)", x, y);
+	}
+
+	public static String formatDollarAmount(double a) {
+		return String.format("$ %d", a);
+	}
+
+	public static String formatProperties(String a, boolean x, boolean y) {
+		return String.format("Class: %c; accessible: %b; mutable: %b", a, x,y);
+	}
+
+	public static String formatTableRow(String b, double x, long y, int z) {
+		return String.format("| %-21c|%3d | %8d | %-05d |", b, x, y, z);
+	}
+}

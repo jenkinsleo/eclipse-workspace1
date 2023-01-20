@@ -1,0 +1,5 @@
+Create a UnitCircle class which implements the Comparable interface.
+
+If unit circle A has a smaller radius that unit circle B, then A < B
+
+Refer to the unit test for expected behaviour.

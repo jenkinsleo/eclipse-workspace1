@@ -1,0 +1,22 @@
+public class RecursiveSorter {
+	
+	public void doQuickSort(IntegerArray clone) {
+	}
+
+	public void doMergeSort(IntegerArray array) {
+		int start = 0;
+		int end = array.length() -1;
+		
+		int middle = (start+ end) / 2;
+		
+		MergeSort(array, start, middle);
+		
+	}
+	
+	private void MergeSort(IntegerArray array, int start, int end) {
+		
+		
+		
+	}
+
+}
